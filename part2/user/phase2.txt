@@ -1,0 +1,10 @@
+Feb  6 20:49:42 yl-VirtualBox kernel: [ 4863.790946] Interceptor: Found syscall table at address: 0xC1667140
+Feb  6 20:49:42 yl-VirtualBox kernel: [ 4863.790964] before ref=sys
+Feb  6 20:49:42 yl-VirtualBox kernel: [ 4863.790977] after disable
+Feb  6 20:49:42 yl-VirtualBox kernel: [ 4842.275298] Unloaded interceptor!
+Feb  6 20:51:27 yl-VirtualBox kernel: [ 4863.790989] Loaded interceptor!<6>[ 4968.135708] 	target is 1001
+Feb  6 20:51:46 yl-VirtualBox kernel: [ 4968.135732] 	Process 3354, loop was altered by user 1001
+Feb  6 21:00:05 yl-VirtualBox kernel: [ 4987.186105] 	Process 3354, loop was altered by user 1000<6>[ 5486.666545] 	target is 1001
+Feb  6 21:00:05 yl-VirtualBox kernel: [ 5486.666569] 	Process 3399, loop was altered by user 1001
+Feb  6 21:00:28 yl-VirtualBox kernel: [ 5486.666571] 	Process 3400, loop was altered by user 1001	Process 3401, loop was altered by user 1001
+Feb  6 21:00:28 yl-VirtualBox kernel: [ 5509.546143] 	Process 3399, loop was altered by user 1000	Process 3400, loop was altered by user 1000

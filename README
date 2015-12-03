@@ -1,0 +1,25 @@
+README
+******************************************
+Ying Lu ylu6@wpi.edu
+Qiaoyu Liao qliao@wpi.edu
+******************************************
+run make to compile all the program
+
+=================Phase 1==================
+
+make								      compile in file testcall
+move executable outside
+make                                      compile module
+sudo insmod part1.ko                      insert module
+./testcall                                run test
+tail -n [numoflines] /var/log/syslog    check output
+
+=================Phase 2==================
+
+make 										compile in file user
+move executable to kernel file
+make										compile module	
+sudo insmod part2.ko						insert module	
+		
+run smite,unsmite independently 
+

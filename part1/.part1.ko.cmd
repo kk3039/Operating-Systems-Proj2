@@ -1,0 +1,1 @@
+cmd_/home/yl/proj2/part1/part1.ko := ld -r -m elf_i386 -T /usr/src/linux-source-3.13.0/linux-source-3.13.0/scripts/module-common.lds --build-id  -o /home/yl/proj2/part1/part1.ko /home/yl/proj2/part1/part1.o /home/yl/proj2/part1/part1.mod.o
