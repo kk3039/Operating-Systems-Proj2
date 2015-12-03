@@ -6,20 +6,38 @@ Qiaoyu Liao qliao@wpi.edu
 run make to compile all the program
 
 =================Phase 1==================
-
-make								      compile in file testcall
+Intercepting system calls "open", "close" and "read" to print information to the system log for regular users.
+make								     
+compile in file testcall
 move executable outside
-make                                      compile module
-sudo insmod part1.ko                      insert module
-./testcall                                run test
-tail -n [numoflines] /var/log/syslog    check output
+make                                     
+compile module
+sudo insmod part1.ko                      
+insert module
+./testcall                                
+run test
+tail -n [numoflines] /var/log/syslog    
+check output
 
 =================Phase 2==================
+We create two executables named smite and unsmite. The smite
+command will take the user ID of a targeted user. The smite command will then go through all the processes
+running on the system, find the first 100 runnable processes associated with that user, and mark them all
+as unrunnable. The smite command will then return the process identifier (PID) and the previous run state
+of all processes that were smited. As each process is being altered, the kernel should print to the system log
+indicating what process, along with the executable name, was altered and the user ID of the smiter.
+The unsmite command will take in a list of PIDs and prior runnable states (ostensibly output from the
+smite command) and revert each indicated PID’s run state back to whatever it was before smite was called.
+As each process is being reverted, the kernel should print to the system log indicating what process, along
+with the executable name, was altered and the user ID of the unsmiter.
 
-make 										compile in file user
+make 									
+compile in file user
 move executable to kernel file
-make										compile module	
-sudo insmod part2.ko						insert module	
+make									
+compile module	
+sudo insmod part2.ko					
+insert module	
 		
 run smite,unsmite independently 
 
